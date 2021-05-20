@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple form for the CNC Developer I Exercise simulating a student registration page.">
+    
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="Shared/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="Scripts/studentRegistration.js"></script>
+
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Really, Really Good School</h1>
+    </div>
+
+    <section class="registration">
+
+        <div class="container">
+            <h2>Student Registration</h2>
+            
+            <div class="formContainer">
+
+                <form>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                    <br>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                    <br>
+
+                    <div class="timeContainer">
+                        <p>Preferred Class Time</p>
+
+                        <table class="timeTable">
+                            <tr>
+                                <td>
+                                    <input type="radio" id="weekTime" name="weekTime" value="weekday" checked>
+                                    <label for="weekday">Weekday</label>
+                                    <br>
+                                    <input type="radio" id="weekTime" name="weekTime" value="weekend">
+                                    <label for="weekend">Weekend</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="classTime" value="mornings" checked>
+                                    <label for="mornings">Mornings</label>
+                                    <br>
+                                    <input type="radio" name="classTime" value="afternoons">
+                                    <label for="afternoons">Afternoons</label>
+                                    <br>
+                                    <input type="radio" name="classTime" value="evenings">
+                                    <label for="evenings">Evenings</label>
+                                    </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                    <label for="startDate">Preferred Start Date</label>
+                    <input type="date" id="startDate" name="startDate">
+
+                    <div class="buttonContainer">
+                        <input id="register" type="submit" value="Register">
+                    </div>
+                </form>
+
+            </div>
+
+        </div> 
+
+    </section>
+
+    <section class="complete">
+        <div class="container">
+            <h2>Registration Complete</h2>
+
+            <div class="formContainer">
+                <p>
+                    Congratulations! You are now registered for your first class at Really, Really Good School.
+                    Please keep the below information for your records.
+                </p>
+                <p id="userName"><strong>User Name: </strong></p>
+                <p id="time"><strong>Start Time: </strong></p>
+                <p id="date"><strong>Start Date: </strong></p>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
