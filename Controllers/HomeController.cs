@@ -29,8 +29,7 @@ namespace Student_Registration.Controllers
         {
 
             //calling the getUserName function to create the user's username
-            //before passing to the function whitespace is removed
-            string name = getUserName(data.firstName.Replace(" ", String.Empty), data.lastName.Replace(" ", String.Empty));
+            string name = getUserName(data.firstName, data.lastName);
 
             //calling the getStartTime and getting the... time of the first class
             string time = getStartTime(data.classTime);

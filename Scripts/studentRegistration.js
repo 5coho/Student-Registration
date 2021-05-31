@@ -36,8 +36,9 @@ $(document).ready(function(){
 function submitRegistration(){
 
     //creating vars from the form data
-    var firstName = $("#firstName").val();
-    var lastName = $("#lastName").val();
+    //All white space from first and last names are removed
+    var firstName = $("#firstName").val().replace(/\s/g, "");
+    var lastName = $("#lastName").val().replace(/\s/g, "");
     var weekTime = $('input[name="weekTime"]:checked').val();
     var classTime = $('input[name="classTime"]:checked').val();
     var startTime = $("#startDate").val();
