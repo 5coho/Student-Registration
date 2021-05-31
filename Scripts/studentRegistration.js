@@ -68,13 +68,13 @@ function submitRegistration(){
             //hides the registration section
             $(".registration").hide();
 
-            //showing the complete section
-            $(".complete").show();
-
             //adding data to client side
             $("#userName").append(resultData.userName);
             $("#time").append(resultData.classTime);
             $("#date").append(resultData.startDate);
+
+            //showing the complete section
+            $(".complete").show();
 
     })
         //the post failed, alert called
